@@ -17,7 +17,6 @@ const bodySchema = z.object({
     city: z.string().min(2),
     address: z.string().min(5),
     paymentMethod: z.enum([
-      "cash_on_delivery",
       "mobile_money",
       "bank_transfer",
     ]),

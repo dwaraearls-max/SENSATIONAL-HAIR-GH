@@ -17,7 +17,7 @@ const schema = z.object({
   email: z.union([z.literal(""), z.string().email("Invalid email")]),
   city: z.string().min(2, "Enter your city"),
   address: z.string().min(5, "Enter your delivery address"),
-  paymentMethod: z.enum(["cash_on_delivery", "mobile_money", "bank_transfer"]),
+  paymentMethod: z.enum(["mobile_money", "bank_transfer"]),
   notes: z.string().optional(),
 });
 
@@ -38,7 +38,7 @@ export default function CheckoutPage() {
       email: "",
       city: "",
       address: "",
-      paymentMethod: "cash_on_delivery",
+      paymentMethod: "mobile_money",
       notes: "",
     },
   });
@@ -231,15 +231,6 @@ export default function CheckoutPage() {
             <fieldset>
               <legend className="text-sm font-medium text-matte">Payment method</legend>
               <div className="mt-3 space-y-2">
-                <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-charcoal/15 px-4 py-3">
-                  <input
-                    type="radio"
-                    value="cash_on_delivery"
-                    className="mt-1 shrink-0"
-                    {...register("paymentMethod")}
-                  />
-                  <span className="min-w-0 leading-snug">Cash on delivery</span>
-                </label>
                 <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-charcoal/15 px-4 py-3">
                   <input
                     type="radio"
