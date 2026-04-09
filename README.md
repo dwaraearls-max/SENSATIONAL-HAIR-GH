@@ -1,6 +1,6 @@
-# MK GADGETS
+# SENSATIONAL HAIR GH
 
-Ecommerce-style marketing site for MK GADGETS (Ghana): product catalog, shopping cart, and checkout. Built with [Next.js](https://nextjs.org) (App Router) and Tailwind CSS.
+Ecommerce-style marketing site for **SENSATIONAL HAIR GH** (Ghana): human hair catalog, shopping cart, and checkout. Built with [Next.js](https://nextjs.org) (App Router) and Tailwind CSS.
 
 ## Getting started
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:4000](http://localhost:4000).
 
 ## Scripts
 

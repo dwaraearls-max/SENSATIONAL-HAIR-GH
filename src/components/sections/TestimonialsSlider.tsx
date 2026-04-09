@@ -10,33 +10,32 @@ const reviews = [
   {
     name: "Kojo A.",
     location: "Accra",
-    text: "Original AirPods, fast delivery. Highly recommended.",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    text: "HD lace melted perfectly — hair is soft and full. Delivery was quick.",
+    photo: "/testimonials/kojo-a.png",
     rating: 5,
   },
   {
     name: "Ama S.",
     location: "Kumasi",
-    text: "Galaxy phone came sealed — they walked me through warranty. Solid service.",
+    text: "Bundles matched the texture they described. Great communication on WhatsApp.",
     photo:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
     rating: 5,
   },
   {
     name: "Emmanuel T.",
     location: "Tema",
-    text: "Great pricing vs mall stores. Will buy my next laptop here too.",
+    text: "Fair pricing vs salons — my unit still looks amazing weeks later.",
     photo:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80",
     rating: 5,
   },
   {
     name: "Yaa M.",
     location: "Takoradi",
-    text: "Smooth checkout on the site — they confirmed stock and delivery fast.",
+    text: "Smooth checkout — they confirmed stock and delivery the same day.",
     photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+      "https://images.unsplash.com/photo-1589156191108-c762ff4b96ac?w=200&q=80",
     rating: 5,
   },
 ];
@@ -58,7 +57,9 @@ export function TestimonialsSlider() {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+    const id = requestAnimationFrame(() => onSelect());
     return () => {
+      cancelAnimationFrame(id);
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
     };
@@ -67,7 +68,7 @@ export function TestimonialsSlider() {
   return (
     <section
       id="reviews"
-      className="scroll-mt-28 bg-background py-16 md:py-24"
+      className="scroll-mt-28 border-y border-charcoal/10 bg-background py-16 md:py-24"
       aria-labelledby="reviews-heading"
     >
       <div className="mx-auto max-w-7xl px-4">
@@ -75,25 +76,25 @@ export function TestimonialsSlider() {
           id="reviews-heading"
           className="text-3xl font-bold tracking-tight text-matte md:text-4xl"
         >
-          Loved by customers
+          The girls said it, not us
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Real feedback from buyers across Ghana — Google-style layout, honest
-          stars.
+          Real installs, real Ghana — lace that melts and bundles that match the
+          hype.
         </p>
         <div className="mt-10 overflow-hidden" ref={emblaRef}>
           <div className="flex gap-6">
             {reviews.map((r) => (
-              <div
+              <article
                 key={r.name}
-                className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)]"
+                className="min-w-0 shrink-0 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <article className="flex h-full flex-col rounded-2xl border border-charcoal/10 bg-surface p-6 shadow-md">
-                  <div className="flex items-start gap-4">
-                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-charcoal/10">
+                <div className="flex h-full flex-col rounded-2xl border border-charcoal/10 bg-surface p-6 shadow-md">
+                  <div className="flex items-center gap-3">
+                    <div className="relative size-12 overflow-hidden rounded-full">
                       <Image
                         src={r.photo}
-                        alt=""
+                        alt={`${r.name} from ${r.location}`}
                         fill
                         className="object-cover"
                         sizes="48px"
@@ -102,45 +103,35 @@ export function TestimonialsSlider() {
                     <div>
                       <p className="font-semibold text-matte">{r.name}</p>
                       <p className="text-sm text-muted">{r.location}</p>
-                      <div
-                        className="mt-1 flex gap-0.5"
-                        aria-label={`${r.rating} out of 5 stars`}
-                      >
-                        {Array.from({ length: r.rating }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className="size-4 fill-matte text-matte"
-                            aria-hidden
-                          />
-                        ))}
-                      </div>
                     </div>
                   </div>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-matte/90">
-                    &ldquo;{r.text}&rdquo;
+                  <div className="mt-3 flex gap-0.5" aria-hidden>
+                    {Array.from({ length: r.rating }).map((_, j) => (
+                      <Star
+                        key={j}
+                        className="size-4 fill-accent text-accent"
+                      />
+                    ))}
+                  </div>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
+                    “{r.text}”
                   </p>
-                </article>
-              </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
-        <div
-          className="mt-6 flex justify-center gap-2"
-          role="tablist"
-          aria-label="Review slides"
-        >
+        <div className="mt-6 flex justify-center gap-2">
           {reviews.map((_, i) => (
             <button
               key={i}
               type="button"
-              role="tab"
-              aria-selected={selected === i}
               className={cn(
-                "h-2 w-8 rounded-full transition",
-                selected === i ? "bg-matte" : "bg-charcoal/20",
+                "size-2 rounded-full transition",
+                i === selected ? "bg-accent" : "bg-charcoal/20",
               )}
+              aria-label={`Go to slide ${i + 1}`}
               onClick={() => emblaApi?.scrollTo(i)}
-              aria-label={`Go to review ${i + 1}`}
             />
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { brand } from "@/lib/brand";
 
 const itemSchema = z.object({
   productId: z.string(),
@@ -41,7 +42,7 @@ export async function POST(req: Request) {
     const to = process.env.ORDER_NOTIFY_EMAIL || process.env.INQUIRY_NOTIFY_EMAIL;
 
     const text = [
-      `NEW ORDER — MK GADGETS`,
+      `NEW ORDER — ${brand.siteName}`,
       ``,
       `Customer`,
       `Name: ${data.customer.fullName}`,
@@ -72,7 +73,7 @@ export async function POST(req: Request) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "MK GADGETS <onboarding@resend.dev>",
+            from: `${brand.siteName} <onboarding@resend.dev>`,
             to: [to],
             subject: `New order from ${data.customer.fullName} — GHS ${total}`,
             text,

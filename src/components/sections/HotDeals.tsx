@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getDealProducts } from "@/lib/catalog";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
+import { formatGhs } from "@/lib/format-money";
 
 export function HotDeals() {
   const deals = getDealProducts();
@@ -16,13 +17,14 @@ export function HotDeals() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-              Limited time
+              Don&apos;t sleep on these
             </p>
             <h2 id="deals-heading" className="mt-2 text-3xl font-bold md:text-4xl">
-              Hot Tech Deals
+              Deals that won&apos;t wait
             </h2>
             <p className="mt-3 text-white/75">
-              Limited stock on trending gadgets — add to cart and checkout online.
+              When these units move, they move — add to cart &amp; lock yours in
+              before stock clears.
             </p>
           </div>
           <Link
@@ -50,7 +52,11 @@ export function HotDeals() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold">{p.name}</h3>
-                <p className="mt-1 text-xs text-white/65">{p.priceLabel}</p>
+                <p className="mt-1 text-xs text-white/65">
+                  {typeof p.priceGhs === "number"
+                    ? formatGhs(p.priceGhs)
+                    : p.priceLabel ?? ""}
+                </p>
                 <div className="mt-3">
                   <AddToCartButton product={p} variant="light" />
                 </div>

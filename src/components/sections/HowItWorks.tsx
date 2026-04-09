@@ -3,20 +3,20 @@ import { Package, Search, ShoppingCart } from "lucide-react";
 const steps = [
   {
     step: "01",
-    title: "Browse & add to cart",
-    body: "Pick products, quantities, and variants — your cart saves on this device.",
+    title: "Pick wigs & add to cart",
+    body: "Pick units, bundles, or care products — your cart saves on this device.",
     icon: Search,
   },
   {
     step: "02",
     title: "Checkout on the site",
-    body: "Enter delivery details and pay instructions — we email you a confirmation.",
+    body: "Enter delivery details and payment preference — we confirm your hair order by message or email.",
     icon: ShoppingCart,
   },
   {
     step: "03",
     title: "Fast delivery or pickup",
-    body: "Nationwide delivery or arranged pickup — tracked and prompt.",
+    body: "Nationwide delivery or arranged pickup — tracked and handled with care.",
     icon: Package,
   },
 ];
@@ -36,8 +36,7 @@ export function HowItWorks() {
           How it works
         </h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Three simple steps from browse to doorstep — built for speed and
-          clarity.
+          Cart → checkout → your door. No long talk — just your hair, handled.
         </p>
         <ol className="mt-12 grid gap-8 md:grid-cols-3" role="list">
           {steps.map(({ step, title, body, icon: Icon }) => (
@@ -51,7 +50,7 @@ export function HowItWorks() {
               >
                 Step {step}
               </span>
-              <div className="mt-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-matte text-white">
+              <div className="mt-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-white">
                 <Icon className="size-7" aria-hidden />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-matte">{title}</h3>

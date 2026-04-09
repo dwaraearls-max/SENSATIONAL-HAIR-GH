@@ -19,8 +19,8 @@ export function ServiceAreas() {
               Service areas & delivery
             </h2>
             <p className="mt-3 text-muted">
-              We serve major cities and ship nationwide — fast, tracked, and
-              reliable.
+              City or town — if you&apos;re in Ghana, we&apos;re trying to get
+              your order to you clean and on time.
             </p>
             <ul className="mt-8 space-y-3" role="list">
               {areas.map((a) => (

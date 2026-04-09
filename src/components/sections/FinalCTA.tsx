@@ -12,24 +12,18 @@ export function FinalCTA() {
           id="cta-heading"
           className="text-balance text-3xl font-bold tracking-tight md:text-4xl"
         >
-          Ready to Upgrade Your Tech
+          Bag the hair — we&apos;ll handle the rest
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/75">
-          Original gadgets, fast nationwide delivery, and support that actually
-          replies — add items to your cart and complete checkout here on the site.
+          Your cart is your yes. Checkout here, we confirm everything before you
+          pay — lace, bundles &amp; nationwide delivery across Ghana.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Link
             href="/cart"
-            className="inline-flex min-h-11 items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-matte transition hover:bg-white/90"
+            className="inline-flex min-h-11 items-center justify-center rounded-2xl bg-accent px-8 py-3 text-sm font-semibold text-white transition hover:bg-accent/90"
           >
-            View cart
-          </Link>
-          <Link
-            href="/#products"
-            className="inline-flex min-h-11 items-center justify-center rounded-2xl border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-          >
-            Browse products
+            View cart &amp; checkout
           </Link>
         </div>
       </div>

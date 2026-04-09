@@ -6,6 +6,7 @@ import { Analytics } from "@/components/Analytics";
 import { getFeaturedProducts } from "@/lib/catalog";
 import { getSiteUrl } from "@/lib/site";
 import { localBusinessJsonLd, productJsonLd } from "@/lib/schema";
+import { brand } from "@/lib/brand";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,32 +23,23 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "MK GADGETS | Premium Gadgets & Electronics in Ghana",
-    template: "%s | MK GADGETS",
+    default: `${brand.siteName} | ${brand.headlineSuffix}`,
+    template: `%s | ${brand.siteName}`,
   },
-  description:
-    "Authentic smartphones, accessories, smart devices, and tech essentials in Ghana. Fast nationwide delivery, warranty support, and trusted service — gadgets in Ghana, original gadgets, phone accessories.",
-  keywords: [
-    "gadgets in Ghana",
-    "electronics shop near me",
-    "buy smartphones Ghana",
-    "original gadgets",
-    "phone accessories",
-  ],
+  description: brand.description,
+  keywords: [...brand.keywords],
   openGraph: {
     type: "website",
     locale: "en_GH",
     url: siteUrl,
-    siteName: "MK GADGETS",
-    title: "MK GADGETS | Premium Gadgets & Electronics in Ghana",
-    description:
-      "Premium gadgets that upgrade your everyday life. Authentic tech, fast delivery across Ghana.",
+    siteName: brand.siteName,
+    title: `${brand.siteName} | ${brand.headlineSuffix}`,
+    description: brand.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "MK GADGETS | Premium Gadgets in Ghana",
-    description:
-      "Authentic smartphones, accessories, and smart devices — nationwide delivery.",
+    title: `${brand.siteName} | ${brand.headlineSuffix}`,
+    description: brand.description,
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
@@ -58,7 +50,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  themeColor: "#0a0a0a",
+  themeColor: "#2d2424",
 };
 
 export default function RootLayout({
@@ -89,7 +81,7 @@ export default function RootLayout({
         <Analytics />
         <a
           href="#hero"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-[max(1rem,env(safe-area-inset-left))] focus:top-[max(1rem,env(safe-area-inset-top))] focus:z-[100] focus:rounded-lg focus:bg-matte focus:px-4 focus:py-2 focus:text-white focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-[max(1rem,env(safe-area-inset-left))] focus:top-[max(1rem,env(safe-area-inset-top))] focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-white focus:outline-none"
         >
           Skip to content
         </a>

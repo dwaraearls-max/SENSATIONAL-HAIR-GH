@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Cart",
-  description: "Review your MK GADGETS cart and checkout.",
+  description: `Review your ${brand.siteName} cart and checkout.`,
   alternates: { canonical: `${getSiteUrl()}/cart` },
 };
 

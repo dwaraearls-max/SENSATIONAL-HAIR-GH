@@ -1,9 +1,9 @@
 import { Award, Clock, Shield, Users } from "lucide-react";
 
 const stats = [
-  { icon: Clock, value: "5+", label: "Years in tech sales" },
-  { icon: Users, value: "3,000+", label: "Happy customers" },
-  { icon: Shield, value: "100%", label: "Authentic products" },
+  { icon: Clock, value: "5+", label: "Years in hair retail" },
+  { icon: Users, value: "3,000+", label: "Happy installs & deliveries" },
+  { icon: Shield, value: "100%", label: "Quality-checked sourcing" },
   { icon: Award, value: "Nationwide", label: "Fast delivery" },
 ];
 
@@ -24,7 +24,7 @@ export function Stats() {
               key={label}
               className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
             >
-              <Icon className="mx-auto size-8 text-white" aria-hidden />
+              <Icon className="mx-auto size-8 text-accent" aria-hidden />
               <p className="mt-4 text-3xl font-bold tracking-tight">{value}</p>
               <p className="mt-1 text-sm text-white/70">{label}</p>
             </li>

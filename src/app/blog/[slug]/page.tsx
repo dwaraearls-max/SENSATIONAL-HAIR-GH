@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/site";
+import { brand } from "@/lib/brand";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -45,8 +46,8 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     datePublished: post.date,
     image: post.image,
-    author: { "@type": "Organization", name: "MK GADGETS" },
-    publisher: { "@type": "Organization", name: "MK GADGETS" },
+    author: { "@type": "Organization", name: brand.siteName },
+    publisher: { "@type": "Organization", name: brand.siteName },
   };
 
   return (

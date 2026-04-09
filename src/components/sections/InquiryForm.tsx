@@ -63,11 +63,11 @@ export function InquiryForm() {
           id="contact-heading"
           className="text-3xl font-bold tracking-tight text-matte md:text-4xl"
         >
-          Inquiry & orders
+          Book it or ask us anything
         </h2>
         <p className="mt-3 text-muted">
-          Tell us what you need — our team will contact you within 10 minutes
-          during business hours.
+          Drop your details — we reply fast during business hours (and yes, you
+          can say you came from TikTok).
         </p>
         <form
           className="mt-10 space-y-5"

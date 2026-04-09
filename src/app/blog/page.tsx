@@ -5,14 +5,15 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { blogPosts } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/site";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Tech Tips & Guides",
+  title: "Lace & bundle tips",
   description:
-    "How to choose smartphones, best phone accessories, and how to spot fake gadgets in Ghana.",
+    "Bundles, lace care & quality checks — SENSATIONAL HAIR GH notes for buyers in Ghana.",
   alternates: { canonical: `${getSiteUrl()}/blog` },
   openGraph: {
-    title: "Tech Tips & Guides | MK GADGETS",
+    title: `Lace & bundle tips | ${brand.siteName}`,
     url: `${getSiteUrl()}/blog`,
   },
 };
@@ -24,11 +25,11 @@ export default function BlogIndexPage() {
       <main className="min-h-[60vh] border-t border-charcoal/10 bg-background py-16">
         <div className="mx-auto max-w-7xl px-4">
           <h1 className="text-4xl font-bold tracking-tight text-matte">
-            Blog & tech tips
+            The hair tea — blog
           </h1>
           <p className="mt-3 max-w-2xl text-muted">
-            SEO-friendly guides for buyers — gadgets in Ghana, original products,
-            and smart accessory choices.
+            Lace, bundles &amp; keeping your install fresh — straight talk for
+            Ghana shoppers.
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {blogPosts.map((post) => (
@@ -60,7 +61,7 @@ export default function BlogIndexPage() {
                   <p className="mt-2 flex-1 text-sm text-muted">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="mt-4 inline-flex text-sm font-semibold text-matte"
+                    className="mt-4 inline-flex text-sm font-semibold text-accent"
                   >
                     Read more →
                   </Link>

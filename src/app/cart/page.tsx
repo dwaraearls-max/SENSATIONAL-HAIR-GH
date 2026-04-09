@@ -31,7 +31,7 @@ export default function CartPage() {
                 href="/#products"
                 className="mt-4 inline-block font-semibold text-matte underline"
               >
-                Continue shopping
+                Shop wigs &amp; hair
               </Link>
             </div>
           ) : (

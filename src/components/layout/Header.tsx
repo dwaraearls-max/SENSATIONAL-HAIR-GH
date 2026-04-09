@@ -4,15 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { brand } from "@/lib/brand";
 import { CartIconLink } from "@/components/cart/CartIconLink";
 import { getPhoneTel } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
 const nav = [
   { href: "/#hero", label: "Home" },
-  { href: "/#products", label: "Products" },
-  { href: "/#categories", label: "Categories" },
-  { href: "/#reviews", label: "Reviews" },
+  { href: "/#products", label: "Wigs & hair" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -41,7 +40,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="min-w-0 shrink" aria-label="MK GADGETS home">
+        <Link href="/" className="min-w-0 shrink" aria-label={`${brand.siteName} home`}>
           <Logo variant="light" />
         </Link>
 

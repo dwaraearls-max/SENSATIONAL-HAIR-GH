@@ -6,20 +6,20 @@ import { cn } from "@/lib/cn";
 
 const faqs = [
   {
-    q: "Are your gadgets original?",
-    a: "We focus on genuine products and transparent sourcing. Ask for IMEI, warranty, and accessories in the box before you pay.",
+    q: "Is the hair human and as described?",
+    a: "We focus on honest grading and transparent sourcing. Ask about texture, length, and bundle weight before you pay — we confirm details on WhatsApp or by phone.",
   },
   {
-    q: "Do you offer warranty?",
-    a: "Warranty depends on the brand and model. We explain coverage clearly at checkout and by email before your order is confirmed.",
+    q: "How do I care for lace and bundles?",
+    a: "Care depends on texture and processing. We share washing, styling, and storage tips at checkout and by message so your install lasts longer.",
   },
   {
     q: "How fast is delivery?",
-    a: "Major cities are typically fastest; nationwide delivery is available. You’ll get a clear timeline when your order is confirmed.",
+    a: "Major cities are typically fastest; nationwide delivery is available. You will get a clear timeline when your order is confirmed.",
   },
   {
     q: "Do you accept payment on delivery?",
-    a: "Payment options vary by item and location. You’ll see available options on the checkout page, or contact us if you need help.",
+    a: "Payment options vary by item and location. You will see available options on the checkout page, or contact us if you need help.",
   },
   {
     q: "Which areas do you deliver to?",
@@ -45,7 +45,8 @@ export function FAQ() {
           FAQ
         </h2>
         <p className="mt-3 text-muted">
-          Quick answers about authenticity, warranty, and delivery in Ghana.
+          The stuff everyone asks before they tap &quot;add to cart&quot; — lace,
+          coins &amp; delivery across Ghana.
         </p>
         <div className="mt-10 divide-y divide-charcoal/10 rounded-2xl border border-charcoal/10 bg-background">
           {faqs.map((item, i) => {

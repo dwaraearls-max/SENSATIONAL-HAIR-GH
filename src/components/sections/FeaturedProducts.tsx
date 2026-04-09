@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedProducts } from "@/lib/catalog";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
+import { formatGhs } from "@/lib/format-money";
 
 export function FeaturedProducts() {
   const products = getFeaturedProducts();
@@ -18,11 +19,11 @@ export function FeaturedProducts() {
             id="products-heading"
             className="text-3xl font-bold tracking-tight text-matte md:text-4xl"
           >
-            Featured picks
+            The units everyone&apos;s adding to cart
           </h2>
           <p className="mt-3 text-muted">
-            Buy smartphones in Ghana with confidence — add to cart and checkout
-            on this site. Prices are indicative; we confirm before payment.
+            Hand-picked lace, bundles &amp; care — checkout here, we confirm your
+            total before you pay. No stress, just hair.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +45,11 @@ export function FeaturedProducts() {
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-lg font-semibold text-matte">{p.name}</h3>
                 <p className="mt-2 flex-1 text-sm text-muted">{p.benefit}</p>
-                {p.priceLabel ? (
+                {typeof p.priceGhs === "number" ? (
+                  <p className="mt-3 text-xs font-medium uppercase tracking-wide text-matte/70">
+                    {formatGhs(p.priceGhs)}
+                  </p>
+                ) : p.priceLabel ? (
                   <p className="mt-3 text-xs font-medium uppercase tracking-wide text-matte/70">
                     {p.priceLabel}
                   </p>
@@ -54,7 +59,7 @@ export function FeaturedProducts() {
                   href="/#contact"
                   className="mt-2 text-center text-xs font-medium text-muted underline-offset-2 hover:text-matte hover:underline"
                 >
-                  Questions before you buy?
+                  Need help choosing?
                 </Link>
               </div>
             </article>

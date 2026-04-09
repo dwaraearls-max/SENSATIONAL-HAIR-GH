@@ -1,136 +1,136 @@
 {
   "categories": [
     {
-      "id": "smartphones",
-      "title": "Smartphones",
-      "benefit": "Latest Android & flagship phones — original, boxed, warranty-backed.",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
+      "id": "wigs",
+      "title": "Wigs & units",
+      "benefit": "HD lace, glueless installs, and ready-to-wear units — soft, natural hairlines.",
+      "image": "/products/wig-01.png"
     },
     {
-      "id": "smartwatches",
-      "title": "Smartwatches",
-      "benefit": "Fitness tracking, notifications, and style — paired to your lifestyle.",
-      "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&q=80"
+      "id": "bundles",
+      "title": "Bundles & wefts",
+      "benefit": "Raw and steam-processed lengths — double-drawn options for full, bouncy installs.",
+      "image": "/products/wig-03.png"
     },
     {
-      "id": "audio",
-      "title": "Earbuds & Headphones",
-      "benefit": "True wireless, ANC, and studio sound for work and play.",
-      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80"
+      "id": "closures",
+      "title": "Closures",
+      "benefit": "5×5 and 4×4 lace — blendable parts for sew-ins and custom units.",
+      "image": "/products/wig-02.png"
     },
     {
-      "id": "power",
-      "title": "Chargers & Power Banks",
-      "benefit": "Fast charging bricks, cables, and portable power that lasts.",
-      "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800&q=80"
+      "id": "frontals",
+      "title": "Frontals",
+      "benefit": "13×4 and 13×6 ear-to-ear lace — versatile styling and deep parting.",
+      "image": "/products/wig-04.png"
     },
     {
-      "id": "laptops",
-      "title": "Laptops & Accessories",
-      "benefit": "Productivity machines, bags, hubs, and keyboards — ready for school & work.",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80"
+      "id": "braidingHair",
+      "title": "Braiding hair",
+      "benefit": "Pre-stretched and expression packs — neat braids with less tension.",
+      "image": "/products/wig-06.png"
     },
     {
-      "id": "gaming",
-      "title": "Gaming Gadgets",
-      "benefit": "Controllers, headsets, and gear that keep you in the game.",
-      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80"
+      "id": "hairCare",
+      "title": "Hair care",
+      "benefit": "Moisture, silk protection, and maintenance essentials for longer wear.",
+      "image": "/products/wig-07.png"
     },
     {
-      "id": "smarthome",
-      "title": "Smart Home",
-      "benefit": "Lights, plugs, and assistants that make home smarter.",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+      "id": "accessories",
+      "title": "Tools & accessories",
+      "benefit": "Caps, bands, edge tools, and install helpers — everything in one place.",
+      "image": "/products/wig-08.png"
     }
   ],
   "products": [
     {
-      "id": "iphone-15-pro-bundle",
-      "name": "iPhone 15 Pro (128GB)",
-      "category": "smartphones",
-      "benefit": "Titanium build, pro camera — genuine with warranty options.",
-      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&q=80",
-      "priceGhs": 14200,
+      "id": "lace-front-voluminous-bob-jet-black",
+      "name": "HD Lace — Voluminous layered bob (jet black)",
+      "category": "wigs",
+      "benefit": "Lace front, deep side part, feathered curls — glam blowout energy, melts at the hairline.",
+      "image": "/products/wig-01.png",
+      "priceGhs": 4200,
       "featured": true,
       "deal": true,
-      "priceLabel": "From ₵14,200"
+      "priceLabel": "₵4,200"
     },
     {
-      "id": "samsung-s24-ultra",
-      "name": "Samsung Galaxy S24 Ultra",
-      "category": "smartphones",
-      "benefit": "S Pen, 200MP camera — flagship power for pros.",
-      "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80",
-      "priceGhs": 13800,
+      "id": "lace-front-bombshell-curl-jet-black",
+      "name": "HD Lace — Bombshell curl unit (jet black)",
+      "category": "wigs",
+      "benefit": "Shoulder-length volume, soft lace hairline — side-swept and photo-ready.",
+      "image": "/products/wig-02.png",
+      "priceGhs": 3950,
       "featured": true,
       "deal": false,
-      "priceLabel": "From ₵13,800"
+      "priceLabel": "₵3,950"
     },
     {
-      "id": "airpods-pro-2",
-      "name": "AirPods Pro (2nd gen)",
-      "category": "audio",
-      "benefit": "ANC, spatial audio — original with charging case.",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
-      "priceGhs": 2200,
+      "id": "lace-front-deep-wave-long-jet-black",
+      "name": "HD Lace — Deep wave long unit (jet black)",
+      "category": "wigs",
+      "benefit": "Middle part, tight deep waves, extra length — full density from root to tip.",
+      "image": "/products/wig-03.png",
+      "priceGhs": 4800,
+      "featured": true,
+      "deal": false,
+      "priceLabel": "₵4,800"
+    },
+    {
+      "id": "lace-front-body-wave-long-jet-black",
+      "name": "HD Lace — Body wave long unit (jet black)",
+      "category": "wigs",
+      "benefit": "Middle part, loose body waves, chest-length glam — natural lace hairline.",
+      "image": "/products/wig-04.png",
+      "priceGhs": 4650,
+      "featured": true,
+      "deal": false,
+      "priceLabel": "₵4,650"
+    },
+    {
+      "id": "lace-front-ginger-barrel-curls",
+      "name": "HD Lace — Ginger barrel curl unit",
+      "category": "wigs",
+      "benefit": "Warm copper-ginger, deep side part, big barrel curls — lace front, high shine.",
+      "image": "/products/wig-05.png",
+      "priceGhs": 4400,
       "featured": true,
       "deal": true,
-      "priceLabel": "₵2,200"
+      "priceLabel": "₵4,400"
     },
     {
-      "id": "apple-watch-ultra",
-      "name": "Apple Watch Ultra 2",
-      "category": "smartwatches",
-      "benefit": "Rugged, precision GPS — for athletes and daily wear.",
-      "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800&q=80",
-      "priceGhs": 6200,
-      "featured": true,
-      "deal": false,
-      "priceLabel": "From ₵6,200"
-    },
-    {
-      "id": "anker-powerbank",
-      "name": "Anker 20,000mAh Power Bank",
-      "category": "power",
-      "benefit": "Fast charging for phones & tablets — travel essential.",
-      "image": "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=800&q=80",
-      "priceGhs": 380,
+      "id": "lace-front-chocolate-kinky-curly",
+      "name": "HD Lace — Chocolate kinky curly unit",
+      "category": "wigs",
+      "benefit": "Rich brown, kinky curl pattern, side part — natural hairline with baby hairs.",
+      "image": "/products/wig-06.png",
+      "priceGhs": 4100,
       "featured": false,
       "deal": true,
-      "priceLabel": "₵380"
+      "priceLabel": "₵4,100"
     },
     {
-      "id": "macbook-air-m3",
-      "name": "MacBook Air (M3)",
-      "category": "laptops",
-      "benefit": "Silent, fast, all-day battery — ideal for students & creators.",
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80",
-      "priceGhs": 11200,
+      "id": "lace-front-honey-blonde-bob",
+      "name": "HD Lace — Honey blonde blunt bob",
+      "category": "wigs",
+      "benefit": "Straight blunt bob, middle part, bright blonde — short, sleek, lace front.",
+      "image": "/products/wig-07.png",
+      "priceGhs": 3850,
       "featured": true,
       "deal": false,
-      "priceLabel": "From ₵11,200"
+      "priceLabel": "₵3,850"
     },
     {
-      "id": "ps5-dualsense",
-      "name": "PS5 DualSense Controller",
-      "category": "gaming",
-      "benefit": "Haptic feedback & adaptive triggers — genuine accessories.",
-      "image": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&q=80",
-      "priceGhs": 750,
-      "featured": false,
-      "deal": true,
-      "priceLabel": "₵750"
-    },
-    {
-      "id": "google-nest-mini",
-      "name": "Smart Speaker / Hub",
-      "category": "smarthome",
-      "benefit": "Voice control for lights, music, and routines.",
-      "image": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800&q=80",
-      "priceGhs": 550,
-      "featured": false,
+      "id": "lace-front-midnight-sleek-bob",
+      "name": "HD Lace — Midnight sleek chin bob",
+      "category": "wigs",
+      "benefit": "Jet black, silky straight, middle part — chin-length with melted lace & baby hairs.",
+      "image": "/products/wig-08.png",
+      "priceGhs": 3900,
+      "featured": true,
       "deal": false,
-      "priceLabel": "₵550"
+      "priceLabel": "₵3,900"
     }
   ]
 }

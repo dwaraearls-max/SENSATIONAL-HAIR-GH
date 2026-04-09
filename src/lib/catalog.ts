@@ -3,7 +3,10 @@ import type { Catalog } from "@/types/catalog";
 
 function hasImageUrl(image: string | undefined): boolean {
   const s = image?.trim();
-  return Boolean(s && /^https?:\/\//i.test(s));
+  if (!s) return false;
+  if (/^https?:\/\//i.test(s)) return true;
+  if (s.startsWith("/")) return true;
+  return false;
 }
 
 /** Drops categories/products with missing or invalid image URLs so cards never render empty. */

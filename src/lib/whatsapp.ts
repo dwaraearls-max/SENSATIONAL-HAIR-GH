@@ -1,4 +1,5 @@
 import { getWhatsAppDigits } from "./site";
+import { brand } from "./brand";
 
 export function buildWhatsAppUrl(message: string): string {
   const phone = getWhatsAppDigits();
@@ -7,4 +8,4 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 export const defaultOrderMessage =
-  "Hi MK GADGETS — I want to order / ask about a gadget. Please assist.";
+  brand.whatsapp.defaultOrderMessage;

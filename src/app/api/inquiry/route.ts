@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { brand } from "@/lib/brand";
 
 const bodySchema = z.object({
   name: z.string().min(2),
@@ -26,7 +27,7 @@ export async function POST(req: Request) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "MK GADGETS <onboarding@resend.dev>",
+            from: `${brand.siteName} <onboarding@resend.dev>`,
             to: [to],
             subject: `New inquiry from ${data.name}`,
             text: [

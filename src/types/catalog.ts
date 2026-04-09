@@ -1,11 +1,11 @@
 export type CategoryId =
-  | "smartphones"
-  | "smartwatches"
-  | "audio"
-  | "power"
-  | "laptops"
-  | "gaming"
-  | "smarthome";
+  | "wigs"
+  | "bundles"
+  | "closures"
+  | "frontals"
+  | "braidingHair"
+  | "hairCare"
+  | "accessories";
 
 export type Category = {
   id: CategoryId;

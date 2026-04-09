@@ -67,7 +67,7 @@ function reducer(state: CartState, action: Action): CartState {
   }
 }
 
-const STORAGE_KEY = "mkgadgets-cart-v1";
+const STORAGE_KEY = "sensationalhair-cart-v1";
 
 type CartContextValue = {
   items: CartLine[];
@@ -95,7 +95,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     } catch {
       /* ignore */
     }
-    setReady(true);
+    const id = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(id);
   }, []);
 
   useEffect(() => {

@@ -7,15 +7,16 @@ import {
   getBusinessAddress,
 } from "@/lib/site";
 import { buildWhatsAppUrl, defaultOrderMessage } from "@/lib/whatsapp";
+import { brand } from "@/lib/brand";
 
 const categories = [
-  "Smartphones",
-  "Smartwatches",
-  "Earbuds & Headphones",
-  "Chargers & Power Banks",
-  "Laptops & Accessories",
-  "Gaming Gadgets",
-  "Smart Home Devices",
+  "Wigs & units",
+  "Bundles & wefts",
+  "Closures",
+  "Frontals",
+  "Braiding hair",
+  "Hair care",
+  "Tools & accessories",
 ];
 
 export function Footer() {
@@ -32,8 +33,9 @@ export function Footer() {
           <div>
             <Logo variant="light" layout="stack" className="mb-4" />
             <p className="text-sm leading-relaxed text-white/70">
-              Premium gadgets & consumer electronics in Ghana. Authentic gear,
-              competitive pricing, and support you can trust.
+              The SENSATIONAL standard: real hair, clean lace, installs that eat
+              — from Accra to every corner of Ghana. Same vibe as our TikTok, full
+              checkout on this site.
             </p>
           </div>
           <div>
@@ -43,7 +45,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white/75">
               {categories.map((c) => (
                 <li key={c}>
-                  <Link href="/#categories" className="hover:text-white">
+                  <Link href="/#products" className="hover:text-white">
                     {c}
                   </Link>
                 </li>
@@ -66,18 +68,24 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={wa} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                <a
+                  href={wa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
                   WhatsApp (support)
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.tiktok.com/@mkgadgets2"
+                  href={brand.socials.tiktok.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  TikTok @mkgadgets2
+                  {brand.socials.tiktok.linkLabel}{" "}
+                  <span className="text-white/60">({brand.socials.tiktok.handle})</span>
                 </a>
               </li>
               {address ? <li>{address}</li> : null}
@@ -93,7 +101,7 @@ export function Footer() {
             {mapUrl ? (
               <div className="overflow-hidden rounded-2xl border border-white/10">
                 <iframe
-                  title="MK GADGETS on Google Maps"
+                  title={`${brand.siteName} on Google Maps`}
                   src={mapUrl}
                   className="h-40 w-full"
                   loading="lazy"
@@ -110,7 +118,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} MK GADGETS. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {brand.siteName}. All rights reserved.
+          </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy" className="hover:text-white">
               Privacy Policy

@@ -1,3 +1,5 @@
+import { brand } from "@/lib/brand";
+
 export type BlogPostMeta = {
   slug: string;
   title: string;
@@ -9,52 +11,56 @@ export type BlogPostMeta = {
 
 export const blogPosts: (BlogPostMeta & { contentHtml: string })[] = [
   {
-    slug: "how-to-choose-the-right-smartphone",
-    title: "How to Choose the Right Smartphone in Ghana",
+    slug: "how-to-choose-quality-human-hair-bundles-ghana",
+    title: "How to Choose Quality Human Hair Bundles in Ghana",
     excerpt:
-      "Battery, camera, software updates, and warranty — what actually matters before you buy.",
+      "Texture, grams per bundle, colour goals, and what to ask before you pay.",
     date: "2026-03-15",
     image:
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80",
+      "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80",
     keywords: [
-      "buy smartphones Ghana",
-      "gadgets in Ghana",
-      "original gadgets",
+      "human hair Ghana",
+      "hair bundles Ghana",
+      "raw hair bundles",
     ],
     contentHtml: `
-      <p>Choosing a smartphone is not only about the brand on the box — it is about how you use your phone every day. Start with battery life and charging speed if you are always on the move. If you create content, prioritise camera sensors and stabilisation. For longevity, look for devices with a strong update policy and buy from a seller who provides clear warranty terms.</p>
-      <h2>Check authenticity</h2>
-      <p>Always verify IMEI, accessories, and warranty documentation. At MK GADGETS we focus on genuine products and transparent after-sales support so you can buy with confidence.</p>
+      <p>Great bundles start with honest grading and consistent wefts. Decide your install first — sew-in, wig, or custom unit — then pick lengths that blend with your natural density. Ask about grams per bundle and whether the hair is single- or double-drawn for fullness from root to tip.</p>
+      <h2>Colour and care</h2>
+      <p>If you plan to lift colour, choose hair that colour-tests well and follow a moisture routine after processing. At ${brand.siteName} we help you match texture and length to your style goals before checkout.</p>
     `,
   },
   {
-    slug: "best-accessories-for-your-phone",
-    title: "Best Accessories for Your Phone",
+    slug: "lace-wig-care-for-longer-wear",
+    title: "Lace Wig Care Tips for Longer Wear",
     excerpt:
-      "From fast chargers to protection — the add-ons that protect your investment.",
+      "Washing, storage, and nightly habits that keep lace melting and hair soft.",
     date: "2026-03-22",
     image:
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1200&q=80",
-    keywords: ["phone accessories", "electronics shop near me", "gadgets in Ghana"],
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+    keywords: ["HD lace wigs Ghana", "lace wig care", "human hair wigs"],
     contentHtml: `
-      <p>A great phone deserves great accessories. A quality fast charger and certified cable reduce heat and extend battery health. A tempered glass screen protector and case prevent costly repairs. Consider wireless earbuds for calls and music, and a compact power bank for long days away from outlets.</p>
-      <h2>Buy quality once</h2>
-      <p>Cheap accessories can damage your device. We stock trusted brands and can recommend bundles that match your phone model.</p>
+      <p>Detangle from ends to roots before washing. Use sulfate-free shampoo and a hydrating conditioner; air-dry on a wig stand when possible. For HD lace, avoid friction at the hairline and protect edges with a silk scarf or bonnet at night.</p>
+      <h2>Install-friendly habits</h2>
+      <p>Rotate adhesives if you wear glueless caps, and refresh the lace perimeter gently — tension and product buildup are what shorten wear time.</p>
     `,
   },
   {
-    slug: "how-to-spot-fake-gadgets",
-    title: "How to Spot Fake Gadgets",
+    slug: "how-to-spot-low-quality-hair-extensions",
+    title: "How to Spot Low-Quality Hair Extensions",
     excerpt:
-      "Red flags, packaging checks, and why buying from a trusted dealer matters.",
+      "Red flags in shedding, smell, and weft construction — before you buy.",
     date: "2026-04-01",
     image:
-      "https://images.unsplash.com/photo-1550009158-9debf290580d?w=1200&q=80",
-    keywords: ["original gadgets", "gadgets in Ghana", "electronics shop near me"],
+      "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=80",
+    keywords: [
+      "quality hair extensions Ghana",
+      "hair vendor Ghana",
+      "fake hair extensions",
+    ],
     contentHtml: `
-      <p>Counterfeit electronics often miss fine print, serial consistency, and official warranty paths. Compare packaging typography, accessory quality, and weight. Suspiciously low prices for current flagship models are a major red flag.</p>
-      <h2>Shop with proof</h2>
-      <p>Buy from retailers who stand behind their stock with warranty support and clear return policies. At MK GADGETS we prioritise authenticity and fast nationwide delivery across Ghana.</p>
+      <p>Excessive shedding on first comb-through, uneven wefts, or a strong chemical smell can signal mixed or over-processed hair. Compare bundle weight and strand thickness across lengths — quality hair feels consistent when run between your fingers.</p>
+      <h2>Buy with clarity</h2>
+      <p>Choose sellers who explain sourcing, return windows, and care expectations. At ${brand.siteName} we prioritise transparent grading and Ghana-wide delivery so you know what you are getting.</p>
     `,
   },
 ];

@@ -1,14 +1,14 @@
 import type { Product } from "@/types/catalog";
 import { getSiteUrl, getPhoneTel, getBusinessAddress } from "./site";
+import { brand } from "./brand";
 
 export function localBusinessJsonLd(): Record<string, unknown> {
   const address = getBusinessAddress();
   const base: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "MK GADGETS",
-    description:
-      "Premium gadgets and consumer electronics in Ghana — authentic smartphones, accessories, smart devices, and tech essentials.",
+    "@type": "Store",
+    name: brand.siteName,
+    description: brand.description,
     url: getSiteUrl(),
     telephone: getPhoneTel(),
     areaServed: {
@@ -36,13 +36,13 @@ export function productJsonLd(products: Product[]): Record<string, unknown> {
       name: p.name,
       description: p.benefit,
       image: p.image.startsWith("http") ? p.image : `${site}${p.image}`,
-      brand: { "@type": "Brand", name: "MK GADGETS" },
+      brand: { "@type": "Brand", name: brand.siteName },
       offers: {
         "@type": "Offer",
         availability: "https://schema.org/InStock",
         priceCurrency: "GHS",
         url: `${site}/#products`,
-        seller: { "@type": "Organization", name: "MK GADGETS" },
+        seller: { "@type": "Organization", name: brand.siteName },
       },
     })),
   };

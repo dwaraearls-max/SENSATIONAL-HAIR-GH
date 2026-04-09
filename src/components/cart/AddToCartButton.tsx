@@ -20,7 +20,7 @@ export function AddToCartButton({
 
   const base =
     variant === "primary"
-      ? "bg-matte text-white hover:bg-charcoal"
+      ? "bg-accent text-white hover:bg-accent/90"
       : variant === "light"
         ? "border border-white/25 bg-white/10 text-white hover:bg-white/20"
         : "border border-charcoal/15 bg-surface text-matte hover:border-charcoal/40";

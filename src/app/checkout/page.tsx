@@ -50,7 +50,7 @@ export default function CheckoutPage() {
         <main className="min-h-[50vh] border-t border-charcoal/10 px-3 py-16 text-center sm:px-4">
           <p className="text-muted">Your cart is empty.</p>
           <Link href="/#products" className="mt-4 inline-block font-semibold text-matte underline">
-            Browse products
+            Shop wigs &amp; hair
           </Link>
         </main>
         <Footer />
